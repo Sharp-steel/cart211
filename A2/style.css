@@ -1,0 +1,146 @@
+body {
+    margin: 0 auto;
+    font-style: normal;
+    background-color: #301934;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Sixtyfour", sans-serif;
+    margin-top: 20px;
+    font-size: 48px;
+    color: skyblue;
+}
+
+p {
+    text-align: center;
+    font-family: "Handjet", sans-serif;
+    font-size: 24px;
+    color: skyblue;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.btn{
+    color: blue;
+    background-color: skyblue;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 800;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid #000000;
+    cursor: pointer;
+    font-family: "Handjet", sans-serif;
+}
+
+.btn a:link {
+    color: skyblue;
+    text-decoration: none;
+}
+
+.btn a:visited {
+    color: skyblue;
+    text-decoration: none;
+}
+
+.btn a:hover {
+    color: skyblue;
+    text-decoration: none;
+}
+
+.btn a:active {
+    color: skyblue;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.container p {
+    margin: 30px 50px 30px 50px;
+}
+
+.option {
+    display: block;
+    text-align: center;
+}
+
+.title {
+    font-size: 72px;
+}
+
+.press-start {
+    text-align: center;
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+}
+
+.go-back {
+    text-align: center;
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.ending-caption {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* MOBILE STYLES */
+
+@media only screen and (min-width: 674px) {
+    .container {
+      flex-wrap: nowrap;
+    }
+  }
+
+@media only screen and (max-width: 798px) {
+    p {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+/* DESKTOP STYLES */
+
+@media only screen and (min-width: 798px) {
+    .text {
+        padding-top: 10px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .container {
+        flex-wrap: nowrap;
+    }
+  }
