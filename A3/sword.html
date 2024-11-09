@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sixtyfour&display=swap" rel="stylesheet">
+    <title>Fate's Path</title>
+</head>
+<body>
+    <audio id="backgroundMusic" loop muted>
+        <source src="audio/batman.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="muteButton">
+        <img id="muteIcon" src="http://upload.wikimedia.org/wikipedia/commons/3/3f/Mute_Icon.svg">
+    </button>
+    <h1>You chose the sword.</h1>
+    <img src="images/sword.png" alt="Vector Graphic of a sword.">
+    <p class="text">
+        You grab your sword and head out of the village in search of food. Outside of the village, 
+        there is a fork in the road, branching off in two different directions. One leads to a thick forest and the
+        other runs along a gushing river.
+        <br>
+        <br>
+        Which path do you take?
+    </p>
+    <div class="container">
+        <div class="option">
+            <p>Take the forest path.</p>
+            <a href="forest-sword.html" class="btn">Forest</a>
+        </div>
+        <div class="option"> 
+            <p>Take the river path.</p>
+            <a href="river-sword.html" class="btn">River</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

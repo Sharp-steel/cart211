@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sixtyfour&display=swap" rel="stylesheet">
+    <title>Fate's Path</title>
+</head>
+<body>
+    <audio id="backgroundMusic" loop muted>
+        <source src="audio/batman.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="muteButton">
+        <img id="muteIcon" src="http://upload.wikimedia.org/wikipedia/commons/3/3f/Mute_Icon.svg">
+    </button>
+    <h1>Choose Your Path</h1>
+    <img src="images/squire.jpg" alt="An 8-bit sprite of a youthful squire.">
+    <p class="text">
+        You are a youthful squire, still learning through the teachings of your mentor.
+        After you finish your combat training for the day, he tells you that it is time
+        to rest up for the night. It is a big day tomorrow, as it is the annual Parade,
+        and you must be in top condition. As you head home to eat your final meal of the day, 
+        you realize that you don't have any food left to eat!
+        <br>
+        <br>
+        What do you do next?
+    </p>
+    <div class="container">
+        <div class="option">
+            <p>It is better to listen to your mentor.</p>
+            <a href="rest.html" class="btn">Rest for tomorrow.</a>
+        </div>
+        <div class="option">
+            <p>You must be in top condition for tomorrow.</p>
+            <a href="hunt.html" class="btn"> Hunt for food.</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

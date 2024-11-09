@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sixtyfour&display=swap" rel="stylesheet">
+    <title>Fate's Path</title>
+</head>
+<body>
+    <audio id="backgroundMusic" loop muted>
+        <source src="audio/batman.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="muteButton">
+        <img id="muteIcon" src="http://upload.wikimedia.org/wikipedia/commons/3/3f/Mute_Icon.svg">
+    </button>
+    <h1>You went hunting.</h1>
+    <img src="images/weapon-choice.jpg" alt="A bow and quiver full of arrows and a sword laying against a wall inside a medieval style home.">
+    <p class="text">
+        By ignoring your mentor, you head out to hunt for some food, but you first need a weapon to hunt with.
+        What do you decide to bring with you to guide you in your hunt?
+        <br>
+        <br>
+        What do you choose?
+    </p>
+    <div class="container">
+        <div class="option">
+            <p>Take your sword.</p>
+            <a href="sword.html" class="btn">A sword.</a>
+        </div>
+        <div class="option">
+            <p>Take your bow and a quiver full of arrows.</p>
+            <a href="bow.html" class="btn">A bow and arrow.</a>
+        </div>
+        <div class="option">
+            <p>IM BRINGING MY BEAR HANDS.</p>
+            <a href="mauled-ending.html" class="btn">Nothing.</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
