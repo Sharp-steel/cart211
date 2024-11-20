@@ -1,3 +1,6 @@
+/**
+ * Grabs the CSS classes and adds then to the JS Code
+ */
 const backgroundMusic = document.getElementById("backgroundMusic");
 const muteButton = document.getElementById("muteButton");
 const muteIcon = document.getElementById("muteIcon");
@@ -5,7 +8,6 @@ const muteIcon = document.getElementById("muteIcon");
 /**
  * Plays the audio
  */
-
 // Initialize `isMuted` and `currentTime` in localStorage if not already set
 if (localStorage.getItem("isMuted") === null) {
   localStorage.setItem("isMuted", "false"); // Default to unmuted
@@ -38,13 +40,12 @@ muteButton.addEventListener("click", () => {
 /**
  * Page Transition
  */
-
   // Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     // Add the fade-in class to initiate the fade-in effect
     document.body.classList.add("fade-in");
 
-    // Attach a click event listener to all links
+    // Add an event listener to all links
     document.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", function (event) {
         // Prevent the default link behavior
@@ -63,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/**
+ * Secret Ending
+ */
 document.addEventListener("DOMContentLoaded", () => {
   // Define the secret code sequence
   const secretCode = "24";
