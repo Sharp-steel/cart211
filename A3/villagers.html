@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Sixtyfour&display=swap" rel="stylesheet">
+    <title>Fate's Path</title>
+</head>
+<body>
+    <div class="background"></div>
+    <audio id="backgroundMusic" loop muted>
+        <source src="audio/ambience.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="muteButton">
+        <img id="muteIcon" src="http://upload.wikimedia.org/wikipedia/commons/3/3f/Mute_Icon.svg">
+    </button>
+    <h1>You went to defend the villagers.</h1>
+    <img src="images/investigate.jpg" alt="An open set of front doors in a medieval style house. Vision of the outside is obscured by a thick fog.">
+    <p class="text">
+        You decided to help defend the other villagers at the center square of the village. While your mentor is treating 
+        to the wounded, you motion to the other villagers to get to a safe place indoors. 
+        <br>
+        <br>
+        You pull out your bow and arrow and attempt to shoot the rampaging black bear from a safe distance. 
+        Your first shot barely missed. The bear has now gotten your attention and is starting to charge towards you.
+        <br>
+        <br>
+        What should you do?
+    </p>
+    <div class="container">
+        <div class="option">
+            <p>Challenge the bear.</p>
+            <a href="challenge.html" class="btn">Challenge</a>
+        </div>
+        <div class="option">
+            <p>Run over to your mentor.</p>
+            <a href="run.html" class="btn">Run</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,7 +1,61 @@
-body {
+body, html {
     margin: 0 auto;
+    width: 100%;
+    height: 100%;
     font-style: normal;
     background-color: #301934;
+}
+
+/* Set the initial state of the page to be transparent */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Fade-in class to make the page fully visible */
+.fade-in {
+    opacity: 1;
+  }
+
+/* Light Effect */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 165, 0, 0.2), rgba(128, 0, 128, 0.15), transparent);
+    animation: glow 8s ease-in-out infinite alternate;
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* Texture Overlay */
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 99, 71, 0.15), rgba(75, 0, 130, 0.1), transparent 60%);
+    opacity: 0.7;
+    animation: flicker 3s infinite alternate ease-in-out;
+    pointer-events: none;  /* Ensure this doesn't interfere with clicks */
+}
+
+/* Keyframes for the Light Waving */
+@keyframes glow {
+    0% { transform: translate(0px, 0px) scale(1.05); }
+    50% { transform: translate(-20px, -15px) scale(1.75); }
+    100% { transform: translate(20px, 15px) scale(1.05); }
+}
+
+/* Keyframes for Subtle Flickering */
+@keyframes flicker {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
 }
 
 h1 {
@@ -9,6 +63,13 @@ h1 {
     font-family: "Sixtyfour", sans-serif;
     margin-top: 20px;
     font-size: 48px;
+    color: skyblue;
+}
+
+h3 {
+    text-align: center;
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 32px;
     color: skyblue;
 }
 
@@ -84,6 +145,7 @@ a:active {
     justify-content: center;
     align-items: center;
     margin-top: -20px;
+    padding-bottom: 100px;
 }
 
 .container p {
@@ -119,6 +181,21 @@ a:active {
     font-weight: 700;
 }
 
+.mauled-number {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.act1-number {
+    text-align: right;
+    padding-bottom: 10px;
+    padding-top: 100px;
+}
+
+.act1 {
+    padding-top: 100px;
+}
+
 #muteButton {
     padding: 5px;
     border: none;
@@ -126,10 +203,12 @@ a:active {
     border-radius: 5px;
     cursor: pointer;
     position: fixed;
-    margin-left: 25px;
+    bottom: 20px;
+    left: 20px;
 }
+
 #muteIcon {
-    width: 40px; /* Adjust size as needed */
+    width: 40px;
     height: 40px;
 }
 
@@ -142,9 +221,28 @@ a:active {
   }
 
 @media only screen and (max-width: 798px) {
-    p {
+    .text {
       padding-left: 50px;
       padding-right: 50px;
+    }
+    .go-back {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .ending-caption {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .press-start {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .mauled-number {
+        margin-right: 10px;
+    }
+    .act1-number {
+        padding-right: 10px;
+        padding-top: 100px;
     }
   }
 
@@ -156,7 +254,22 @@ a:active {
         padding-left: 300px;
         padding-right: 300px;
     }
+    h1 {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
     .container {
         flex-wrap: nowrap;
+    }
+    .mauled-number {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .act1-number {
+        padding-right: 10px;
+        padding-top: 200px;
+    }
+    .act1 {
+        padding-top: 150px;
     }
   }

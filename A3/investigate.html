@@ -10,8 +10,9 @@
     <title>Fate's Path</title>
 </head>
 <body>
+    <div class="background"></div>
     <audio id="backgroundMusic" loop muted>
-        <source src="audio/batman.mp3" type="audio/mpeg">
+        <source src="audio/ambience.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <button id="muteButton">
@@ -27,12 +28,18 @@
         <br>
         Your mentor is present at the scene, and he is helping another villager who is in quite some distress. He motions
         for you to come over and help him, but the bear is still running rampant.
-        <!-- How should you help out the village? -->
+        <br>
+        <br>
+        What should you do?
     </p>
     <div class="container">
         <div class="option">
-            <p>End of Demo.</p>
-            <a href="index.html" class="btn">Return to the start.</a>
+            <p>Help tend to the wounded.</p>
+            <a href="wounded.html" class="btn">Tend to the Wounded</a>
+        </div>
+        <div class="option">
+            <p>Rush to defend the villagers.</p>
+            <a href="villagers.html" class="btn">Defend the Villagers</a>
         </div>
     </div>
     <script src="script.js"></script>

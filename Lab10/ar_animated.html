@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Animated AR.js Demo</title>
+ <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+ <style>
+ body, html {
+ margin: 0;
+ overflow: hidden;
+ font-family: Arial, sans-serif;
+ }
+ #startButton {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: #007BFF;
+ color: white;
+ padding: 10px 20px;
+ font-size: 18px;
+ border: none;
+ cursor: pointer;
+ z-index: 10;
+ }
+ </style>
+</head>
+<body>
+    <button id="startButton" onclick="startAR()">Start AR Experience</button>
+<a-scene embedded arjs style="display: none;" id="ar-scene">
+    <a-marker type="pattern" url="markers/pattern-rowletderp.patt">
+        <a-box position="0 0.5 0" color="purple" scale="0.5 0.5 0.5"></a-box>
+    </a-marker>
+    <!-- Hiro Marker -->
+    <a-marker preset="hiro">
+        <a-box position="0 0.5 0" color="blue" scale="0.5 0.5 0.5"></a-box>
+    </a-marker>
+   <!-- Kanji Marker -->
+    <a-marker preset="kanji">
+        <a-sphere position="0 0.5 0" color="red" radius="0.3"></a-sphere>
+    </a-marker>
+ <a-entity camera></a-entity>
+</a-scene>
+<script>
+ function startAR() {
+ document.getElementById('startButton').style.display = 'none';
+ document.getElementById('ar-scene').style.display = 'block';
+ setTimeout(() => {
+ const video = document.querySelector('video');
+ if (video) {
+ video.setAttribute('playsinline', '');
+ video.play().catch(error => console.error("Video playback failed:", error));
+ }
+ }, 1000);
+ }
+</script>
+</body>
+</html>
